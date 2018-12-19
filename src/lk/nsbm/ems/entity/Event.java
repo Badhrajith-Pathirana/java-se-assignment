@@ -15,13 +15,19 @@ public class Event {
     private int eId;
     private Date edate;
     private String EType;
+    private String customerNic;
+    private int packageId;
     
     //Date firstDate = new Date();
-    public Event(int eId,Date edate,String EType){
+
+    public Event(int eId, Date edate, String EType, String customerNic, int packageId) {
         this.eId = eId;
         this.edate = edate;
         this.EType = EType;
+        this.customerNic = customerNic;
+        this.packageId = packageId;
     }
+
     public Event(){
         eId = 000;
         edate = new Date(2018,12,06);
@@ -44,5 +50,21 @@ public class Event {
     }
     public String getEType(){
         return EType;
+    }
+
+    public String getCustomerNic() {
+        return customerNic;
+    }
+
+    public void setCustomerNic(String customerNic) {
+        this.customerNic = customerNic;
+    }
+
+    public int getPackageId() {
+        return packageId;
+    }
+
+    public void setPackageId(int packageId) {
+        this.packageId = packageId;
     }
 }
